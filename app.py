@@ -1,6 +1,6 @@
 from flask import *
 from datetime import datetime
-from pymongo import MongoClient
+from pymongo import MongoClient, DESCENDING
 import cloudinary
 from cloudinary import uploader
 
@@ -31,7 +31,7 @@ def index():
 
 @app.route("/collection/")
 def detail():
-    list_image = db.Image.find({})
+    list_image = db.Image.find({}).sort("created_date",DESCENDING)
     return render_template("detail.html", images = list_image)
 
 
@@ -52,8 +52,6 @@ def timesince(dt, default="just now"):
         (diff.days // 7, "week", "weeks"),
         (diff.days, "day", "days"),
         (diff.seconds // 3600, "hour", "hours"),
-
-
         (diff.seconds // 60, "minute", "minutes"),
 
 
