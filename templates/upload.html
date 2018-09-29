@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload Flask</title>
+    <link rel="stylesheet" href="static/css/index.css">
+
+</head>
+<body>
+    <h1>Upload File</h1>
+    <h2>Using Flask & MLab</h2>
+    
+    <form method="post" enctype="multipart/form-data">
+        <div class="input-file-container">  
+        <input class="input-file" id="my-file" type="file" name="image" multiple>
+        <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
+        </div>
+        <div class="file-return">
+                <!-- <p class="file"></p>
+                <img id="myimage"> -->
+        </div>
+        <input type="submit" class="file-upload-btn">
+    </form>
+    
+    <p class="txtcenter">It's just a test, not really usable.<br />Works on IE &gt; 8 and modern browsers</p>
+    <p class="txtcenter copy">Made by <a href="https://github.com/quyctd">@quyctd</a></p>
+
+    <!-- Script here -->
+    <script src="static/js/script.js"> </script>
+    
+    <!-- <script>
+        function onFileSelected(event) {
+            console.log(event.target.files);
+            var selectedFile = event.target.files[0];
+            var reader = new FileReader();
+            document.getElementById('myimage').setAttribute("style","height:200px");
+
+            var imgtag = document.getElementById("myimage");
+            imgtag.title = selectedFile.name;
+
+            reader.onload = function(event) {
+                imgtag.src = event.target.result;
+            };
+
+            reader.readAsDataURL(selectedFile);
+        }
+    </script> -->
+</body>
+</html>

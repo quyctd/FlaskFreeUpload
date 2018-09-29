@@ -1,0 +1,229 @@
+html,
+body {
+	margin: 0;
+	font-size: 100%;
+	font-family: 'Tajawal', sans-serif;
+	background: #fff;
+}
+
+body img {
+	/* width: 100%; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 1px;
+}
+
+
+/*-- gallery --*/
+
+/*jquery.picEyes*/
+
+.picshade {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100% !important;
+	background-color: #000;
+	opacity: 0.91;
+	filter: alpha(opacity=91);
+	z-index: 99;
+	display: none;
+}
+
+.pictures_eyes_close {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/close.png) no-repeat;
+	z-index: 100;
+	display: none;
+}
+
+.pictures_eyes {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 199;
+	display: none;
+}
+
+.pictures_eyes_in {
+	position: relative;
+	text-align: center;
+}
+
+.pictures_eyes_in img {
+	max-height: 500px;
+	max-width: 700px;
+}
+
+.pictures_eyes_in .prev,
+.pictures_eyes_in .next {
+	position: absolute;
+	top: 50%;
+	width: 51px;
+	height: 51px;
+	cursor: pointer;
+}
+
+.pictures_eyes_in .prev {
+	left: 35px;
+	background: url(../images/left1.png) no-repeat;
+}
+
+.pictures_eyes_in .next {
+	right: 35px;
+	background: url(../images/right1.png) no-repeat;
+}
+
+.pictures_eyes_indicators {
+	position: fixed;
+	left: 0;
+	bottom: 15px;
+	width: 100%;
+	text-align: center;
+	z-index: 299;
+}
+
+.pictures_eyes_indicators a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin: 6px 3px 0 3px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 2px #000;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	overflow: hidden;
+}
+
+.pictures_eyes_indicators img {
+	height: 50px;
+}
+
+.pictures_eyes_indicators .current {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.gallery-grid1 {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.gallery-grid1 .p-mask,
+.row .product .vm-product-media-container .p-mask {
+	opacity: 0;
+	visibility: hidden;
+	background: rgba(25, 24, 24, 0.8);
+	bottom: 0%;
+	position: absolute;
+	padding: 0.5em 1em;
+	width: 100%;
+	-webkit-transform: translate3d( 0px, 100%, 0px);
+	-moz-transform: translate3d( 0px, 100%, 0px);
+	-ms-transform: translate3d( 0px, 100%, 0px);
+	-o-transform: translate3d( 0px, 100%, 0px);
+	transform: translate3d( 0px, 100%, 0px);
+	-webkit-transition: all .5s ease 0s;
+	-moz-transition: all .5s ease 0s;
+	transition: all .5s ease 0s;
+	text-align: center;
+	border-bottom: 4px solid #00a98f;
+}
+
+.gallery-grid1 .p-mask .p-desc {
+	color: #a3a3a3;
+	position: relative;
+	display: block;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	font-size: 1em;
+}
+
+.gallery-grid1:hover .p-mask,
+.row .product:hover .p-mask {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translate3d( 0px, 0px, 0px);
+	-moz-transform: translate3d( 0px, 0px, 0px);
+	-ms-transform: translate3d( 0px, 0px, 0px);
+	-o-transform: translate3d( 0px, 0px, 0px);
+	transform: translate3d( 0px, 0px, 0px);
+}
+
+.p-mask h4 {
+	color: #fff;
+	font-size: 1.2em;
+	text-decoration: none;
+	line-height: 1.8em;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.p-mask p {
+	margin: 0;
+	color: #f5f5f5;
+	line-height: 1.8em;
+	font-size: 15px;
+	letter-spacing: 1px;
+}
+
+.pictures_eyes_in {
+	position: relative;
+	text-align: center;
+}
+
+/*-- //gallery --*/
+
+/* New css */
+#columns {
+	column-width: 320px;
+	column-gap: 15px;
+  width: 90%;
+	max-width: 1100px;
+	margin: 50px auto;
+}
+
+div#columns figure {
+	background: #fefefe;
+	border: 2px solid #fcfcfc;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	padding: 15px;
+	padding-bottom: 10px;
+	transition: opacity .4s ease-in-out;
+  display: inline-block;
+  column-break-inside: avoid;
+}
+
+div#columns figure img {
+	width: 100%; height: auto;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+div#columns:hover figure:not(:hover) {
+	opacity: 0.4;
+}
+
+@media screen and (max-width: 750px) { 
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
+}
