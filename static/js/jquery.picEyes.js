@@ -50,6 +50,8 @@
 			}
 			var xx = $obj.eq(num).find('img').attr("src");
 			$(".pictures_eyes img").attr("src", xx);
+			$("a.link").text(xx);
+			$("a.link").attr('href',xx);
 			stopPropagation(e);
 			popwin($('.pictures_eyes'));
 		});
@@ -61,6 +63,8 @@
 			}
 			var xx = $obj.eq(num).find('img').attr("src");
 			$(".pictures_eyes img").attr("src", xx);
+			$("a.link").text(xx);
+			$("a.link").attr('href',xx);
 			stopPropagation(e);
 			popwin($('.pictures_eyes'));
 		});

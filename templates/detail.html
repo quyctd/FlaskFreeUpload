@@ -30,7 +30,7 @@
 								{% for image in images %}
 								<figure class="fig" data-toggle="tooltip" data-placement="top" title="{{image.link}}">
 									<img src="{{image.link}}" alt="{{image.link}}">
-									<p>Created Date: <a href="{{image.link}}">{{image.created_date.strftime('%d-%m-%Y')}}</a></p>
+									<p>Created Date: {{image.created_date.strftime('%d-%m-%Y')}}</p>
 									<a href="{{image.link}}" class="btn btn-success">View Image</a>
 
 								</figure>
