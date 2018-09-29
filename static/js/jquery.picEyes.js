@@ -93,6 +93,8 @@
 				$(this).addClass('current').siblings().removeClass('current');
 				var xx = $(this).find('img').attr("src");
 				$(".pictures_eyes img").attr("src", xx);
+				$("a.link").text(xx);
+				$("a.link").attr('href',xx);
 				updatePlace($('.pictures_eyes'));
 			});
 		}
