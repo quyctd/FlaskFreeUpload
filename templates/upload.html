@@ -14,13 +14,10 @@
     
     <form method="post" enctype="multipart/form-data">
         <div class="input-file-container">  
-        <input class="input-file" id="my-file" type="file" name="image" multiple>
-        <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
+            <input class="input-file" id="my-file" type="file" name="image" multiple>
+            <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
         </div>
-        <div class="file-return">
-                <!-- <p class="file"></p>
-                <img id="myimage"> -->
-        </div>
+        <div class="file-return"></div>
         <input type="submit" class="file-upload-btn">
     </form>
     
@@ -30,22 +27,5 @@
     <!-- Script here -->
     <script src="static/js/script.js"> </script>
     
-    <!-- <script>
-        function onFileSelected(event) {
-            console.log(event.target.files);
-            var selectedFile = event.target.files[0];
-            var reader = new FileReader();
-            document.getElementById('myimage').setAttribute("style","height:200px");
-
-            var imgtag = document.getElementById("myimage");
-            imgtag.title = selectedFile.name;
-
-            reader.onload = function(event) {
-                imgtag.src = event.target.result;
-            };
-
-            reader.readAsDataURL(selectedFile);
-        }
-    </script> -->
 </body>
 </html>

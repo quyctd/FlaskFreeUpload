@@ -11,7 +11,6 @@ cloudinary.config(
   api_secret = 'SrlSO-4T4W2lQx72PEYGHSEnOwU'  
 )
 
-
 #Connect database
 client = MongoClient("mongodb://admin:admin123@ds051933.mlab.com:51933/flaskimgur")
 db = client.flaskimgur
