@@ -14,20 +14,27 @@ button.addEventListener( "click", function( event ) {
     return false;
 });  
 fileInput.addEventListener( "change", function( event ) {  
-    for (var i = 0; i < fileInput.files.length; i++){
+    var len = fileInput.files.length;
+    var text = document.createElement('p');
+    if (len == 1)
+        text.innerText = "Selected file: ";
+    else
+        text.innerText = len + " files selected";
+    the_return.appendChild(text);
+
+    the_return.style.border = "5px dashed #1FB264";
+    // the_return.style["border-radius"] = "5%";
+
+    for (var i = 0; i < len; i++){
         var file = event.target.files[i];
         // the_return.innerHTML = this.value;  
-        // create new p
-        var new_p = document.createElement('p');
-        new_p.innerText = String(file.name);
 
         //create new img
         var new_img = document.createElement('img');
-        new_img.setAttribute("style","height:200px");
+        new_img.setAttribute("style","height:200px; padding: 0 10px 25px 10px;");
         new_img.setAttribute("id","image"+i);
 
         //add new tag to return DIV
-        the_return.appendChild(new_p);
         the_return.appendChild(new_img);
 
         var selectedFile = file;

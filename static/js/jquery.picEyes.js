@@ -17,9 +17,9 @@
 			+'<a class="pictures_eyes_close" href="javascript:;"></a>'
 			+'<div class="pictures_eyes">'
 			+'<div class="pictures_eyes_in">'
-			+'<img src="" />'
+			+'<img class="mb-3" src="" />'
 			+"<br>"
-			+'<a class="link text-secondary mt-3" href=""></a>'
+			+'<a class="link text-secondary" href=""></a>'
 			+'<div class="next"></div>'
 			+'<div class="prev"></div>'
 			+'</div>'

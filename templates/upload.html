@@ -9,15 +9,18 @@
 
 </head>
 <body>
-    <h1>Upload File</h1>
-    <h2>Using Flask & MLab</h2>
+    <h1>Upload Image</h1>
+    <h2>Using Flask & Cloudinary</h2>
     
-    <form method="post" enctype="multipart/form-data">
+    <form class="mx-auto" method="post" enctype="multipart/form-data">
         <div class="input-file-container">  
             <input class="input-file" id="my-file" type="file" name="image" multiple>
-            <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
+            <label tabindex="0" for="my-file" class="input-file-trigger">Select file(s)...</label>
         </div>
-        <div class="file-return"></div>
+        <div class="file-return">
+
+        </div>
+
         <input type="submit" class="file-upload-btn">
     </form>
     

@@ -1,6 +1,7 @@
 .input-file-container {
 	position: relative;
 	width: 225px;
+	margin: 0 auto;
   } 
   .js .input-file-trigger {
 	display: block;
@@ -39,7 +40,6 @@
 	font-weight: bold;
   }
   .js .file-return:not(:empty):before {
-	content: "Selected file: ";
 	font-style: normal;
 	font-weight: normal;
   }
@@ -62,7 +62,7 @@
 	color: #1ABC9C;
   }
   form {
-	width: 225px;
+	/* width: 225px; */
 	margin: 0 auto;
 	text-align:center;
   }
@@ -86,8 +86,8 @@
   /* CSS button upload */
 
   .file-upload-btn {
-	width: 100%;
-	margin: 10% 0;
+	width: 225px;
+	margin: 0 0;
 	color: #fff;
 	background: #1FB264;
 	border: none;

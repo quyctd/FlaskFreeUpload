@@ -8,7 +8,7 @@ from cloudinary import uploader
 cloudinary.config(
   cloud_name = 'flask-image',  
   api_key = '133444264233997',  
-  api_secret = 'SrlSO-4T4W2lQx72PEYGHSEnOwU'  
+  api_secret = 'SrlSO-4T4W2lQx72PEYGHSEnOwU'
 )
 
 #Connect database
@@ -33,6 +33,39 @@ def index():
 def detail():
     list_image = db.Image.find({})
     return render_template("detail.html", images = list_image)
+
+
+@app.template_filter()
+def timesince(dt, default="just now"):
+    """
+    Returns string representing "time since" e.g.
+    3 days ago, 5 hours ago etc.
+    """
+
+    now = datetime.now()
+    diff = now - dt
+    
+    periods = (
+
+        (diff.days // 365, "year", "years"),
+        (diff.days // 30, "month", "months"),
+        (diff.days // 7, "week", "weeks"),
+        (diff.days, "day", "days"),
+        (diff.seconds // 3600, "hour", "hours"),
+
+
+        (diff.seconds // 60, "minute", "minutes"),
+
+
+    )
+
+    for period, singular, plural in periods:
+        print(period)
+        print(singular)
+        if period:
+            return "%d %s ago" % (period, singular if period == 1 else plural)
+
+    return default
 
 if __name__ == '__main__':
   app.run(debug=True)
