@@ -9,7 +9,7 @@
 			+'<a class="pictures_eyes_close" href="javascript:;"></a>'
 			+'<div class="pictures_eyes">'
 			+'<div class="pictures_eyes_in">'
-			+'<img class="" src="" />'
+			+'<img class="mb-3" src="" />'
 			+"<br>"
 			+'<a class="mb-3 link text-secondary" href=""></a>'
 			+'<div class="next"></div>'
