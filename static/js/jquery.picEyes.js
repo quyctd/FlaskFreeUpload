@@ -10,8 +10,7 @@
 			+'<div class="pictures_eyes">'
 			+'<div class="pictures_eyes_in">'
 			+'<img class="mb-3" src="" />'
-			+"<br>"
-			+'<a class="mb-3 link text-secondary" href=""></a>'
+			
 			+'<div class="next"></div>'
 			+'<div class="prev"></div>'
 			+'</div>'
@@ -22,8 +21,7 @@
 			$(".picshade").css("height", win_h);
 			var n = $(this).find("img").attr('src');
 			$(".pictures_eyes img").attr("src", n);
-			$("a.link").text(n);
-			$("a.link").attr('href',n);
+			
 			num = $obj.index(this);
 			popwin($('.pictures_eyes'));
 		});
@@ -42,8 +40,7 @@
 			}
 			var xx = $obj.eq(num).find('img').attr("src");
 			$(".pictures_eyes img").attr("src", xx);
-			$("a.link").text(xx);
-			$("a.link").attr('href',xx);
+			
 			stopPropagation(e);
 			popwin($('.pictures_eyes'));
 		});
@@ -55,8 +52,7 @@
 			}
 			var xx = $obj.eq(num).find('img').attr("src");
 			$(".pictures_eyes img").attr("src", xx);
-			$("a.link").text(xx);
-			$("a.link").attr('href',xx);
+			
 			stopPropagation(e);
 			popwin($('.pictures_eyes'));
 		});
@@ -85,8 +81,7 @@
 				$(this).addClass('current').siblings().removeClass('current');
 				var xx = $(this).find('img').attr("src");
 				$(".pictures_eyes img").attr("src", xx);
-				$("a.link").text(xx);
-				$("a.link").attr('href',xx);
+				
 				updatePlace($('.pictures_eyes'));
 			});
 		}
