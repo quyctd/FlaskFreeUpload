@@ -9,6 +9,19 @@
 
     <link rel="stylesheet" href="static/css/index.css">
 
+    <style>
+        #myProgress {
+            width: 100%;
+            background-color: #ddd;
+        }
+        
+        #myBar {
+            width: 1%;
+            height: 30px;
+            background-color: #4CAF50;
+        }   
+    </style>
+
 </head>
 <body>
     <div>
@@ -16,7 +29,7 @@
         <h2>Using Flask & Cloudinary</h2>
         
 
-        <form class="mx-auto" method="post" enctype="multipart/form-data">
+        <form class="mx-auto" method="post" onsubmit="uploadFile()" enctype="multipart/form-data">
             <div class="input-file-container">  
                 <input class="input-file" id="my-file" type="file" name="image" multiple>
                 <label tabindex="0" for="my-file" class="input-file-trigger">Select file(s)...</label>
@@ -33,8 +46,15 @@
 
 
     </div>
+    
+          
     <div id="load" style="display: none;">
-        <div class="spinner"></div>
+        <div>
+                <div class="spinner"></div>
+                <br>
+                <h3 style="text-align: center; color:#1AA059; margin-top: 30vh;">Please wait....</h3>
+        </div>
+        
     </div>
     <!-- Script here -->
     <script src="static/js/script.js"> </script>
