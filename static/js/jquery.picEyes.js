@@ -1,12 +1,4 @@
-/*
-* jQuery picPlay plugin
-* @name jquery-picEyes-1.0.js
-* @author xiaoyan - frbao
-* @version 1.0
-* @date Jan 14, 2016
-* @category jQuery plugin
-* @github https://github.com/xiaoyan0552/jquery.picEyes
-*/
+
 (function($){
 	$.fn.picEyes = function(){
 		var $obj = this;

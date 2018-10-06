@@ -5,28 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Upload Flask</title>
+    <link rel="stylesheet" href="static/css/circle.css">
+
     <link rel="stylesheet" href="static/css/index.css">
 
 </head>
 <body>
-    <h1>Upload Image</h1>
-    <h2>Using Flask & Cloudinary</h2>
-    
-    <form class="mx-auto" method="post" enctype="multipart/form-data">
-        <div class="input-file-container">  
-            <input class="input-file" id="my-file" type="file" name="image" multiple>
-            <label tabindex="0" for="my-file" class="input-file-trigger">Select file(s)...</label>
-        </div>
-        <div class="file-return mx-3">
+    <div>
+        <h1>Upload Image</h1>
+        <h2>Using Flask & Cloudinary</h2>
+        
 
-        </div>
+        <form class="mx-auto" method="post" enctype="multipart/form-data">
+            <div class="input-file-container">  
+                <input class="input-file" id="my-file" type="file" name="image" multiple>
+                <label tabindex="0" for="my-file" class="input-file-trigger">Select file(s)...</label>
+            </div>
+            <div class="file-return mx-3">
 
-        <input type="submit" class="file-upload-btn">
-    </form>
-    
-    <p class="txtcenter">It's just a test, not really usable.<br />Works on IE &gt; 8 and modern browsers</p>
-    <p class="txtcenter copy">Made by <a href="https://github.com/quyctd">@quyctd</a></p>
+            </div>
+            
+            <input type="submit" class="file-upload-btn">
+        </form>
+        
+        <p class="txtcenter">It's just a test, not really usable.<br />Works on IE &gt; 8 and modern browsers</p>
+        <p class="txtcenter copy">Made by <a href="https://github.com/quyctd">@quyctd</a></p>
 
+
+    </div>
+    <div id="load" style="display: none;">
+        <div class="spinner"></div>
+    </div>
     <!-- Script here -->
     <script src="static/js/script.js"> </script>
     

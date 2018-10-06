@@ -58,8 +58,7 @@ def timesince(dt, default="just now"):
     )
 
     for period, singular, plural in periods:
-        print(period)
-        print(singular)
+        
         if period:
             return "%d %s ago" % (period, singular if period == 1 else plural)
 

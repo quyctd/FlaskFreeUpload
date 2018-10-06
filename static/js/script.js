@@ -58,3 +58,14 @@ fileInput.addEventListener( "change", function( event ) {
     }
 
 });  
+
+
+var submit = document.querySelector(".file-upload-btn");
+console.log("Submit done");
+submit.addEventListener("click", function(event){
+    console.log("Clicked");
+    var spin = document.querySelector("#load");
+    spin.style.display = "block";
+    spin.style.height = "100vh";
+    spin.classList.add("rgba");
+})
