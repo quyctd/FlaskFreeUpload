@@ -3,12 +3,13 @@ from datetime import datetime
 from pymongo import MongoClient, DESCENDING
 import cloudinary
 from cloudinary import uploader
+import os
 
 #Config cloudinary
 cloudinary.config(
-  cloud_name = 'flask-image',  
-  api_key = '133444264233997',  
-  api_secret = 'SrlSO-4T4W2lQx72PEYGHSEnOwU'
+  cloud_name = os.environ.get('CLOUD_NAME'),  
+  api_key = os.environ.get('API_KEY'),  
+  api_secret = os.environ.get('API_SECRET')
 )
 
 #Connect database
